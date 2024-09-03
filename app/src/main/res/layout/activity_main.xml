@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- pt xyz -->
+    <TextView
+        android:id="@+id/txt_pt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pt_name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="34dp"
+        />
+
+    <!-- img location -->
+    <ImageView
+        android:id="@+id/img_locationn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/location"
+        android:layout_below="@id/txt_pt_title"
+        android:layout_alignStart="@+id/txt_pt_title"
+        android:layout_marginTop="10dp"
+        />
+
+    <!-- sleman -->
+    <TextView
+        android:id="@+id/txt_sleman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pt_location"
+        android:textSize="20sp"
+        android:layout_alignTop="@id/img_locationn"
+        android:layout_toRightOf="@id/img_locationn"
+        android:layout_marginLeft="10dp"
+        />
+
+    <!-- rectangle informasi -->
+    <RelativeLayout
+        android:id="@+id/informasi_data"
+        android:layout_width="350sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/img_locationn"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp">
+
+        <!-- Title Text -->
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:textColor="#9D9D9D"
+            android:textSize="12sp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Last Update Label -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@id/textView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp">
+
+            <!-- Last Update Label -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info2"
+                android:textColor="#9D9D9D"
+                android:textSize="12sp" />
+
+            <!-- Last Update Date -->
+            <TextView
+                android:id="@+id/textView2_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="@string/info3"
+                android:textColor="#EE6627"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_below="@id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp">
+
+            <!-- Last Update Label -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pembaruan_selanjutnya"
+                android:textColor="#9D9D9D"
+                android:textSize="12sp" />
+
+            <!-- Last Update Date -->
+            <TextView
+                android:id="@+id/textView2_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tanggal_selanjutnya"
+                android:textColor="#EE6627"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginStart="2dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- kotak kotak -->
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_katalogtender"
+        android:background="@drawable/bottom_shadow"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:layout_below="@id/informasi_data"
+        android:layout_alignStart="@id/informasi_data"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/img_ViewIcon"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/katalod_tender"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_ViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/katalog_tender"
+            android:layout_below="@+id/img_ViewIcon"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_simpantender"
+        android:background="@drawable/bottom_shadow"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:layout_below="@id/informasi_data"
+        android:layout_alignEnd="@id/informasi_data"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/img_tendersimpan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/tender_tersimpan"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"/>
+
+        <TextView
+            android:id="@+id/txt_tendersimpan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tender_tersimpan"
+            android:layout_below="@+id/img_tendersimpan"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_laporanstatistik"
+        android:background="@drawable/bottom_shadow"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:layout_below="@id/layout_katalogtender"
+        android:layout_alignStart="@id/layout_katalogtender"
+        >
+
+        <ImageView
+            android:id="@+id/img_statistik"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/statistik"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/txt_lapstatistik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/laporan_statistik"
+            android:layout_below="@+id/img_statistik"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_settings"
+        android:background="@drawable/bottom_shadow"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:padding="16dp"
+        android:layout_below="@id/layout_simpantender"
+        android:layout_alignEnd="@id/layout_simpantender"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:id="@+id/img_settings"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/pengaturan"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"/>
+
+        <TextView
+            android:id="@+id/txt_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pengaturan"
+            android:layout_below="@+id/img_settings"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
